@@ -1,9 +1,11 @@
+const path = require('path');
+
 module.exports = {
     siteMetadata: {
         title: 'JunKim',
         description: "JunKim's portfolio website",
         keyword: 'portfolio, portfolio website, frontend developer, frontend, web developer, JunKim',
-        siteUrl: '',
+        siteUrl: 'https://suyeon.me',
         image: '',
         author: 'JunKim',
         profiles: {
@@ -18,7 +20,7 @@ module.exports = {
         },
     },
     plugins: [
-        `gatsby-plugin-typescript`,
+        `gatsby-plugin-typescript`, // 추가!
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-image`,
         {
@@ -40,6 +42,18 @@ module.exports = {
                 theme_color: `#663399`,
                 display: `minimal-ui`,
                 icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-root-import',
+            options: {
+                src: path.join(__dirname, 'src'),
+                components: path.join(__dirname, 'src/components'),
+                icons: path.join(__dirname, 'src/assets/icons'),
+                fonts: path.join(__dirname, 'src/assets/fonts'),
+                images: path.join(__dirname, 'src/assets/images'),
+                styles: path.join(__dirname, 'src/styles'),
+                hooks: path.join(__dirname, 'src/hooks'),
             },
         },
         `gatsby-plugin-gatsby-cloud`,
