@@ -43,8 +43,7 @@ const ScrollIndicator: React.FC = () => {
   return (
     <Wrapper>
       <button onClick={() => scrollTo('#about')}>Scroll</button>
-
-     <img src={arrow} />  
+      <img src={arrow} />
     </Wrapper>
   );
 };

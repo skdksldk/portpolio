@@ -63,7 +63,7 @@ const Nav: React.FC = () => {
   return (
     <Wrapper>
       <LangDropdown />
-      <StyledLink to="/">JUN.</StyledLink>
+      <StyledLink to="/">ISU.</StyledLink>
     </Wrapper>
   );
 };
